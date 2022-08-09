@@ -1,31 +1,423 @@
-<img src="https://i.ibb.co/mJ4XCnn/output-onlinepngtools.jpg" alt="logo">
-<h1>Documentation for shortcuts created by Mr.T-Wrecks</h1>
-<h2>Shortcuts</h2>
-<a href="https://github.com/MrTWrecks0208/MrTWrecks0208.github.io/wiki" target="_blank">Wiki</a>
-<h3>For Shortcut Developers:</h3>
-<h4>DevKit</h4>
-<ul>
-  <li>miCloud</li>
-  <li>GittyUp!</li>
-  <li>Version Compare</li>
-  <li>ReleaseKit</li>
-  <li>PromoKit</li>
-  <li>Tipsee</li>
-  <li>CloudCuts</li>
-  <li>Roadmap</li>
-</ul>
-<h4>Other shortcuts for developers</h4>
-<ul>
-  <li>Lorem Ipsum</li>
-  <li>Stork</li>
-  <li>Viewer</li>
-</ul>
-<br/>
-<h3>Other Shortcuts</h3>
-<ul>
-  <li>Best By</li>
-  <li>Best By Summary</li>
-  <li>De-AMP</li>
-  <li>FastPass</li>
-  <li>NearBytes</li>
-</ul>
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+  <title>CodePen - 3D Fold out reveal</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+<link rel="stylesheet" href="./style.css">
+</head>
+<style>
+  @font-face {
+	font-family: "Source Sans Pro";
+	font-style: normal;
+	font-weight: 200;
+	src: url(https://fonts.gstatic.com/s/sourcesanspro/v14/6xKydSBYKcSV-LCoeQqfX1RYOo3i94_wlxdr.ttf)
+		format("truetype");
+}
+@font-face {
+	font-family: "Source Sans Pro";
+	font-style: normal;
+	font-weight: 300;
+	src: url(https://fonts.gstatic.com/s/sourcesanspro/v14/6xKydSBYKcSV-LCoeQqfX1RYOo3ik4zwlxdr.ttf)
+		format("truetype");
+}
+@font-face {
+	font-family: "Source Sans Pro";
+	font-style: normal;
+	font-weight: 400;
+	src: url(https://fonts.gstatic.com/s/sourcesanspro/v14/6xK3dSBYKcSV-LCoeQqfX1RYOo3qOK7g.ttf)
+		format("truetype");
+}
+@font-face {
+	font-family: "Source Sans Pro";
+	font-style: normal;
+	font-weight: 600;
+	src: url(https://fonts.gstatic.com/s/sourcesanspro/v14/6xKydSBYKcSV-LCoeQqfX1RYOo3i54rwlxdr.ttf)
+		format("truetype");
+}
+@font-face {
+	font-family: "Source Sans Pro";
+	font-style: normal;
+	font-weight: 700;
+	src: url(https://fonts.gstatic.com/s/sourcesanspro/v14/6xKydSBYKcSV-LCoeQqfX1RYOo3ig4vwlxdr.ttf)
+		format("truetype");
+}
+@font-face {
+	font-family: "Source Sans Pro";
+	font-style: normal;
+	font-weight: 900;
+	src: url(https://fonts.gstatic.com/s/sourcesanspro/v14/6xKydSBYKcSV-LCoeQqfX1RYOo3iu4nwlxdr.ttf)
+		format("truetype");
+}
+body {
+	background: #dce1df;
+	color: #001730;
+	font-family: "Source Sans Pro", sans-serif;
+	text-rendering: optimizeLegibility;
+	padding: 5%;
+}
+a.btn {
+	background: #fb8122;
+	border-radius: 4px;
+	box-shadow: 2px 2px 10px 0 rgba(0, 0, 0, 0.5);
+	color: #ffffff;
+	display: inline-block;
+	padding: 6px 30px 8px;
+	position: relative;
+	text-decoration: none;
+	transition: all 0.2s ease-out;
+}
+.no-touch a.btn:hover {
+	background: #e06404;
+	box-shadow: 0px 8px 2px 0 rgba(0, 0, 0, 0.075);
+	transform: translateY(-2px);
+	transition: all 0.2s ease-out;
+}
+.no-touch a.btn:active,
+a.btn:active {
+	background: #b35003;
+	box-shadow: 0 1px 0px 0 rgba(255, 255, 255, 0.25);
+	transform: translate3d(0, 1px, 0);
+	transition: all 0.025s 0s ease-out;
+}
+div.cards {
+	margin: 80px auto;
+	max-width: 960px;
+	text-align: center;
+}
+div.card {
+	background: #ffffff;
+	display: inline-block;
+	margin: 15px;
+	max-width: 350px;
+	perspective: 1000;
+	position: relative;
+	text-align: left;
+	transition: all 0.2s 0s ease-out;
+	width: 300px;
+	z-index: 1;
+}
+div.card img {
+	width: 300px;
+	max-width: 300px;
+	height: 270px;
+}
+div.card .card__image-holder {
+	background: rgba(0, 0, 0, 0.1);
+	height: 0;
+	padding-bottom: 75%;
+}
+div.card div.card-title {
+	background: #ffffff;
+	padding: 6px 15px 10px;
+	position: relative;
+	z-index: 0;
+}
+div.card div.card-title a.toggle-info {
+	border-radius: 50%;
+	height: 32px;
+	padding: 0;
+	position: absolute;
+	right: 15px;
+	top: 5px;
+	width: 32px;
+}
+div.card div.card-title a.toggle-info span {
+	background: #fff;
+	display: block;
+	height: 2px;
+	position: absolute;
+	top: 16px;
+	transition: all 0.15s 0s ease-out;
+	width: 12px;
+}
+div.card div.card-title a.toggle-info span.left {
+	right: 14px;
+	transform: rotate(45deg);
+}
+div.card div.card-title a.toggle-info span.right {
+	left: 14px;
+	transform: rotate(-45deg);
+}
+div.card div.card-title h2 {
+	font-size: 24px;
+	font-weight: 700;
+	letter-spacing: -0.05em;
+	margin: 0;
+	padding: 0;
+}
+div.card div.card-title h2 small {
+	display: block;
+	font-size: 18px;
+	font-weight: 600;
+	letter-spacing: -0.025em;
+}
+div.card div.card-description {
+	padding: 0 15px 10px;
+	position: relative;
+	font-size: 14px;
+}
+div.card div.card-actions {
+	box-shadow: 0 2px 0px 0 rgba(0, 0, 0, 0.075);
+	padding: 10px 15px 20px;
+	text-align: center;
+}
+div.card .fp {
+	background-image: url("https://i.ibb.co/cbvk0G8/pw-vector.png");
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+div.card div.card-flap {
+	background: #d9d9d9;
+	position: absolute;
+	width: 100%;
+	transform-origin: top;
+	transform: rotateX(-90deg);
+}
+div.card div.flap1 {
+	transition: all 0.3s 0.3s ease-out;
+	z-index: -1;
+}
+div.card div.flap2 {
+	transition: all 0.3s 0s ease-out;
+	z-index: -2;
+}
+div.cards.showing div.card {
+	cursor: pointer;
+	opacity: 0.6;
+	transform: scale(0.88);
+}
+.no-touch div.cards.showing div.card:hover {
+	opacity: 0.94;
+	transform: scale(0.92);
+}
+div.card.show {
+	opacity: 1 !important;
+	transform: scale(1) !important;
+}
+div.card.show div.card-title a.toggle-info {
+	background: #ff6666 !important;
+}
+div.card.show div.card-title a.toggle-info span {
+	top: 15px;
+}
+div.card.show div.card-title a.toggle-info span.left {
+	right: 10px;
+}
+div.card.show div.card-title a.toggle-info span.right {
+	left: 10px;
+}
+div.card.show div.card-flap {
+	background: #ffffff;
+	transform: rotateX(0deg);
+}
+div.card.show div.flap1 {
+	transition: all 0.3s 0s ease-out;
+}
+div.card.show div.flap2 {
+	transition: all 0.3s 0.2s ease-out;
+}
+</style>
+<body>
+	<!-- partial:index.partial.html -->
+	<div class="cards">
+
+		<div class="card">
+			<div class="card__image-holder">
+				<img class="card__image" src="https://i.ibb.co/VYMM9kv/depositphotos-68933283-stock-illustration-social-media-marketing-flat-icon.jpg" alt="PromoKit" />
+			</div>
+			<div class="card-title">
+				<a href="#" class="toggle-info btn">
+					<span class="left"></span>
+					<span class="right"></span>
+				</a>
+				<h2>
+					PromoKit
+					<small><i>THE</i> shortcut for promotion</small>
+				</h2>
+			</div>
+			<div class="card-flap flap1">
+				<div class="card-description">
+					This grid is an attempt to make something nice that works on touch devices. Ignoring hover states when they're not available etc.
+				</div>
+				<div class="card-flap flap2">
+					<div class="card-actions">
+						<a href="https://www.icloud.com/shortcuts/fad13abf143244cf885843b999b2a8cc" class="btn">Download</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="card">
+			<div class="card__image-holder">
+				<img class="card__image " src="https://i.ibb.co/n34stQ4/pass.png" alt="FastPass" />
+			</div>
+			<div class="card-title">
+				<a href="" class="toggle-info btn">
+					<span class="left"></span>
+					<span class="right"></span>
+				</a>
+				<h2>
+					FastPass
+					<small>Generate secure passwords <i>instantly</i></small>
+				</h2>
+			</div>
+			<div class="card-flap flap1">
+				<div class="card-description">
+					This grid is an attempt to make something nice that works on touch devices. Ignoring hover states when they're not available etc.
+				</div>
+				<div class="card-flap flap2">
+					<div class="card-actions">
+						<a href="https://www.icloud.com/shortcuts/d5e9e14e47de4940b9aae0e16250d5a3" class="btn">Download</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="card">
+			<div class="card__image-holder">
+				<img class="card__image " src="https://i.ibb.co/mtmSxBn/webdesign.png" alt="Viewer" />
+			</div>
+			<div class="card-title">
+				<a href="#" class="toggle-info btn">
+					<span class="left"></span>
+					<span class="right"></span>
+				</a>
+				<h2>
+					Viewer
+					<small>Preview web pages &amp; vCards</small>
+				</h2>
+			</div>
+			<div class="card-flap flap1">
+				<div class="card-description">
+					This grid is an attempt to make something nice that works on touch devices. Ignoring hover states when they're not available etc.
+				</div>
+				<div class="card-flap flap2">
+					<div class="card-actions">
+						<a href="https://www.icloud.com/shortcuts/5ec7dfec6206456797d89bbc2e3a2016
+" class="btn">Download</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="card">
+			<div class="card__image-holder">
+				<img class="card__image" src="https://i.ibb.co/rkVCtX9/product-dates-rgb-color-icon-expiration-deadline-milk-grocery-food-supermarket-foodstuff-to-purchase.jpg" alt="Best By" />
+			</div>
+			<div class="card-title">
+				<a href="#" class="toggle-info btn">
+					<span class="left"></span>
+					<span class="right"></span>
+				</a>
+				<h2>
+					Best By
+					<small>Prevent food waste!</small>
+				</h2>
+			</div>
+			<div class="card-flap flap1">
+				<div class="card-description">
+					This grid is an attempt to make something nice that works on touch devices. Ignoring hover states when they're not available etc.
+				</div>
+				<div class="card-flap flap2">
+					<div class="card-actions">
+						<a href="#" class="btn">Read more</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="card">
+			<div class="card__image-holder">
+				<img class="card__image" src="https://i.ibb.co/ynM0zRP/Garbage-and-trash-cartoon-character-Isolated-icons-set-Spoiled-food-illustration-Landfill-vector-bac.jpg" alt="Summary" />
+			</div>
+			<div class="card-title">
+				<a href="#" class="toggle-info btn">
+					<span class="left"></span>
+					<span class="right"></span>
+				</a>
+				<h2>
+					Best By Summary
+					<small>View expiring items as lists</small>
+				</h2>
+			</div>
+			<div class="card-flap flap1">
+				<div class="card-description">
+					This grid is an attempt to make something nice that works on touch devices. Ignoring hover states when they're not available etc.
+				</div>
+				<div class="card-flap flap2">
+					<div class="card-actions">
+						<a href="#" class="btn">Read more</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="card">
+			<div class="card__image-holder">
+				<img class="card__image" src="https://i.ibb.co/bLdXThP/apple-music-icon-for-big-sur-4x.png" alt="Spotlight" />
+			</div>
+			<div class="card-title">
+				<a href="#" class="toggle-info btn">
+					<span class="left"></span>
+					<span class="right"></span>
+				</a>
+				<h2>
+					Spotlight
+					<small>For equality in your playlists</small>
+				</h2>
+			</div>
+			<div class="card-flap flap1">
+				<div class="card-description">
+					This grid is an attempt to make something nice that works on touch devices. Ignoring hover states when they're not available etc.
+				</div>
+				<div class="card-flap flap2">
+					<div class="card-actions">
+						<a href="#" class="btn">Read more</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- partial -->
+		<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+		<script src='https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js'></script>
+		<script src="./script.js"></script>
+
+</body>
+
+</html>
+<script>
+  $(document).ready(function () {
+	var zindex = 10;
+
+	$("div.card").click(function (e) {
+		e.preventDefault();
+
+		var isShowing = false;
+
+		if ($(this).hasClass("show")) {
+			isShowing = true;
+		}
+
+		if ($("div.cards").hasClass("showing")) {
+			// a card is already in view
+			$("div.card.show").removeClass("show");
+
+			if (isShowing) {
+				// this card was showing - reset the grid
+				$("div.cards").removeClass("showing");
+			} else {
+				// this card isn't showing - get in with it
+				$(this).css({ zIndex: zindex }).addClass("show");
+			}
+
+			zindex++;
+		} else {
+			// no cards in view
+			$("div.cards").addClass("showing");
+			$(this).css({ zIndex: zindex }).addClass("show");
+
+			zindex++;
+		}
+	});
+});
+</script>
