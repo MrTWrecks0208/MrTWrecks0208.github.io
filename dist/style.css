@@ -41,50 +41,52 @@
 		format("truetype");
 }
 body {
-	background: #dce1df;
+	background: #1d205c;
 	color: #001730;
 	font-family: "Source Sans Pro", sans-serif;
 	text-rendering: optimizeLegibility;
-	padding: 5%;
+	max-width: 1920px;
+	width: 100%;
 }
 a.btn {
 	background: #fb8122;
-	border-radius: 4px;
-	box-shadow: 2px 2px 10px 0 rgba(0, 0, 0, 0.5);
-	color: #ffffff;
+	border-radius: 5px;
+	box-shadow: 2px 4px 10px 4px rgba(0, 0, 0, 0.2);
+	color: #fff;
 	display: inline-block;
 	padding: 6px 30px 8px;
 	position: relative;
 	text-decoration: none;
-	transition: all 0.2s ease-out;
+	transition: all 0.2s 0s ease-in-out;
 }
 .no-touch a.btn:hover {
 	background: #e06404;
-	box-shadow: 0px 8px 2px 0 rgba(0, 0, 0, 0.075);
+	box-shadow: 2px 8px 6px 6px rgba(0, 0, 0, 0.1);
 	transform: translateY(-2px);
-	transition: all 0.2s ease-out;
+	transition: all 0.2s 0s ease-in-out;
 }
 .no-touch a.btn:active,
 a.btn:active {
-	background: #b35003;
+	background: #ff6242;
 	box-shadow: 0 1px 0px 0 rgba(255, 255, 255, 0.25);
-	transform: translate3d(0, 1px, 0);
-	transition: all 0.025s 0s ease-out;
+	transform: translateY(4px);
+	transition: all 0.025s 0s ease-in-out;
 }
 div.cards {
-	margin: 80px auto;
-	max-width: 960px;
+	margin: 100px auto;
+	width: 80%;
 	text-align: center;
+	vertical-align: middle;
 }
 div.card {
 	background: #ffffff;
 	display: inline-block;
-	margin: 15px;
+	margin: 25px;
 	max-width: 350px;
 	perspective: 1000;
 	position: relative;
 	text-align: left;
-	transition: all 0.2s 0s ease-out;
+	transition: all 0.3s 0s ease-in;
 	width: 300px;
 	z-index: 1;
 }
@@ -109,8 +111,8 @@ div.card div.card-title a.toggle-info {
 	height: 32px;
 	padding: 0;
 	position: absolute;
-	right: 15px;
-	top: 5px;
+	right: 12px;
+	top: 4px;
 	width: 32px;
 }
 div.card div.card-title a.toggle-info span {
@@ -139,7 +141,7 @@ div.card div.card-title h2 {
 }
 div.card div.card-title h2 small {
 	display: block;
-	font-size: 18px;
+	font-size: 14px;
 	font-weight: 600;
 	letter-spacing: -0.025em;
 }
