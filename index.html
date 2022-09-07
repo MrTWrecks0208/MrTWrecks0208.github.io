@@ -4,9 +4,10 @@
   <title>CodePen - 3D Fold out reveal</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
 <link rel="stylesheet" href="./style.css">
+
 </head>
 <style>
-  @font-face {
+ @font-face {
 	font-family: "Source Sans Pro";
 	font-style: normal;
 	font-weight: 200;
@@ -49,50 +50,52 @@
 		format("truetype");
 }
 body {
-	background: #dce1df;
+	background: #1d205c;
 	color: #001730;
 	font-family: "Source Sans Pro", sans-serif;
 	text-rendering: optimizeLegibility;
-	padding: 5%;
+	max-width: 1920px;
+	width: 100%;
 }
 a.btn {
 	background: #fb8122;
-	border-radius: 4px;
-	box-shadow: 2px 2px 10px 0 rgba(0, 0, 0, 0.5);
-	color: #ffffff;
+	border-radius: 5px;
+	box-shadow: 2px 4px 10px 4px rgba(0, 0, 0, 0.2);
+	color: #fff;
 	display: inline-block;
 	padding: 6px 30px 8px;
 	position: relative;
 	text-decoration: none;
-	transition: all 0.2s ease-out;
+	transition: all 0.2s 0s ease-in-out;
 }
 .no-touch a.btn:hover {
 	background: #e06404;
-	box-shadow: 0px 8px 2px 0 rgba(0, 0, 0, 0.075);
+	box-shadow: 2px 8px 6px 6px rgba(0, 0, 0, 0.1);
 	transform: translateY(-2px);
-	transition: all 0.2s ease-out;
+	transition: all 0.2s 0s ease-in-out;
 }
 .no-touch a.btn:active,
 a.btn:active {
-	background: #b35003;
+	background: #ff6242;
 	box-shadow: 0 1px 0px 0 rgba(255, 255, 255, 0.25);
-	transform: translate3d(0, 1px, 0);
-	transition: all 0.025s 0s ease-out;
+	transform: translateY(4px);
+	transition: all 0.025s 0s ease-in-out;
 }
 div.cards {
-	margin: 80px auto;
-	max-width: 960px;
+	margin: 100px auto;
+	width: 80%;
 	text-align: center;
+	vertical-align: middle;
 }
 div.card {
 	background: #ffffff;
 	display: inline-block;
-	margin: 15px;
+	margin: 25px;
 	max-width: 350px;
 	perspective: 1000;
 	position: relative;
 	text-align: left;
-	transition: all 0.2s 0s ease-out;
+	transition: all 0.3s 0s ease-in;
 	width: 300px;
 	z-index: 1;
 }
@@ -117,8 +120,8 @@ div.card div.card-title a.toggle-info {
 	height: 32px;
 	padding: 0;
 	position: absolute;
-	right: 15px;
-	top: 5px;
+	right: 12px;
+	top: 4px;
 	width: 32px;
 }
 div.card div.card-title a.toggle-info span {
@@ -147,7 +150,7 @@ div.card div.card-title h2 {
 }
 div.card div.card-title h2 small {
 	display: block;
-	font-size: 18px;
+	font-size: 14px;
 	font-weight: 600;
 	letter-spacing: -0.025em;
 }
@@ -216,14 +219,14 @@ div.card.show div.flap1 {
 div.card.show div.flap2 {
 	transition: all 0.3s 0.2s ease-out;
 }
+
 </style>
 <body>
-	<!-- partial:index.partial.html -->
+	<!--partial:index.partial.html -->
 	<div class="cards">
-
 		<div class="card">
 			<div class="card__image-holder">
-				<img class="card__image" src="https://i.ibb.co/VYMM9kv/depositphotos-68933283-stock-illustration-social-media-marketing-flat-icon.jpg" alt="PromoKit" />
+				<img class="card__image" src="https://i.imgur.com/rIYQhRO.png" alt="PromoKit" />
 			</div>
 			<div class="card-title">
 				<a href="#" class="toggle-info btn">
@@ -232,12 +235,12 @@ div.card.show div.flap2 {
 				</a>
 				<h2>
 					PromoKit
-					<small><i>THE</i> shortcut for promotion</small>
+					<small>Promotion and Support directly in shortcuts</small>
 				</h2>
 			</div>
 			<div class="card-flap flap1">
 				<div class="card-description">
-					This grid is an attempt to make something nice that works on touch devices. Ignoring hover states when they're not available etc.
+					PromoKit is the first and only shortcut that allows developers to promote their brand and offer support directly in your shortcuts!
 				</div>
 				<div class="card-flap flap2">
 					<div class="card-actions">
@@ -249,7 +252,7 @@ div.card.show div.flap2 {
 
 		<div class="card">
 			<div class="card__image-holder">
-				<img class="card__image " src="https://i.ibb.co/n34stQ4/pass.png" alt="FastPass" />
+				<img class="card__image " src="https://i.imgur.com/pgk2FzW.png" alt="FastPass">
 			</div>
 			<div class="card-title">
 				<a href="" class="toggle-info btn">
@@ -258,16 +261,68 @@ div.card.show div.flap2 {
 				</a>
 				<h2>
 					FastPass
-					<small>Generate secure passwords <i>instantly</i></small>
+					<small>Generate secure passwords instantly</small>
 				</h2>
 			</div>
 			<div class="card-flap flap1">
 				<div class="card-description">
-					This grid is an attempt to make something nice that works on touch devices. Ignoring hover states when they're not available etc.
+					Generate strong, secure passwords locally on your device in a matter of seconds with FastPass!
 				</div>
 				<div class="card-flap flap2">
 					<div class="card-actions">
 						<a href="https://www.icloud.com/shortcuts/d5e9e14e47de4940b9aae0e16250d5a3" class="btn">Download</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="card">
+			<div class="card__image-holder">
+				<img class="card__image" src="https://i.imgur.com/pT7i1x2.png">
+			</div>
+			<div class="card-title">
+				<a href="#" class="toggle-info btn">
+					<span class="left"></span>
+					<span class="right"></span>
+				</a>
+				<h2>
+					Best By
+					<small>Prevent food waste!</small>
+				</h2>
+			</div>
+			<div class="card-flap flap1">
+				<div class="card-description">
+					Just scan the bar code, set the expiration date, and never worry about food expiring again!
+				</div>
+				<div class="card-flap flap2">
+					<div class="card-actions">
+						<a href="#" class="btn">Download</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="card">
+			<div class="card__image-holder">
+				<img class="card__image" src="https://i.imgur.com/rDAE2GU.png">
+			</div>
+			<div class="card-title">
+				<a href="#" class="toggle-info btn">
+					<span class="left"></span>
+					<span class="right"></span>
+				</a>
+				<h2>
+					Best By Summary
+					<small>See what's expiring and when</small>
+				</h2>
+			</div>
+			<div class="card-flap flap1">
+				<div class="card-description">
+					Best By Summary is the companion shortcut for Best By and reminds users when items are set to expire.
+				</div>
+				<div class="card-flap flap2">
+					<div class="card-actions">
+						<a href="#" class="btn">Download</a>
 					</div>
 				</div>
 			</div>
@@ -284,12 +339,12 @@ div.card.show div.flap2 {
 				</a>
 				<h2>
 					Viewer
-					<small>Preview web pages &amp; vCards</small>
+					<small>Preview web pages &amp; vCard menus</small>
 				</h2>
 			</div>
 			<div class="card-flap flap1">
 				<div class="card-description">
-					This grid is an attempt to make something nice that works on touch devices. Ignoring hover states when they're not available etc.
+					Viewer is an important tool for developers.
 				</div>
 				<div class="card-flap flap2">
 					<div class="card-actions">
@@ -302,7 +357,7 @@ div.card.show div.flap2 {
 
 		<div class="card">
 			<div class="card__image-holder">
-				<img class="card__image" src="https://i.ibb.co/rkVCtX9/product-dates-rgb-color-icon-expiration-deadline-milk-grocery-food-supermarket-foodstuff-to-purchase.jpg" alt="Best By" />
+				<img src="https://i.imgur.com/XX8FbP5.png" alt="Quick UID">
 			</div>
 			<div class="card-title">
 				<a href="#" class="toggle-info btn">
@@ -310,25 +365,24 @@ div.card.show div.flap2 {
 					<span class="right"></span>
 				</a>
 				<h2>
-					Best By
-					<small>Prevent food waste!</small>
+					Quick UID
+					<small>Generate unique identifiers quickly</small>
 				</h2>
 			</div>
 			<div class="card-flap flap1">
 				<div class="card-description">
-					This grid is an attempt to make something nice that works on touch devices. Ignoring hover states when they're not available etc.
+					Whether you need a UUID or GUID, Quick UID has you covered!
 				</div>
 				<div class="card-flap flap2">
 					<div class="card-actions">
-						<a href="#" class="btn">Read more</a>
+						<a href="#" class="btn">Download</a>
 					</div>
 				</div>
 			</div>
 		</div>
-
 		<div class="card">
 			<div class="card__image-holder">
-				<img class="card__image" src="https://i.ibb.co/ynM0zRP/Garbage-and-trash-cartoon-character-Isolated-icons-set-Spoiled-food-illustration-Landfill-vector-bac.jpg" alt="Summary" />
+				<img src="https://i.imgur.com/cMCjDgy.png" alt="De-AMP">
 			</div>
 			<div class="card-title">
 				<a href="#" class="toggle-info btn">
@@ -336,25 +390,24 @@ div.card.show div.flap2 {
 					<span class="right"></span>
 				</a>
 				<h2>
-					Best By Summary
-					<small>View expiring items as lists</small>
+					De-AMP
+					<small>Redirect from AMP links&#8212;for <u><i>FREE</i></u>!</small>
 				</h2>
 			</div>
 			<div class="card-flap flap1">
-				<div class="card-description">
-					This grid is an attempt to make something nice that works on touch devices. Ignoring hover states when they're not available etc.
-				</div>
+				<dTiv class="card-description">
+					Redirect from AMP links and open web pages directly in your preferred browser with De-AMP.
+				</dTiv>
 				<div class="card-flap flap2">
 					<div class="card-actions">
-						<a href="#" class="btn">Read more</a>
+						<a href="#" class="btn">Download</a>
 					</div>
 				</div>
 			</div>
 		</div>
-
 		<div class="card">
 			<div class="card__image-holder">
-				<img class="card__image" src="https://i.ibb.co/bLdXThP/apple-music-icon-for-big-sur-4x.png" alt="Spotlight" />
+				<img src="https://i.imgur.com/gVWBTE1.png" alt="Tipsee">
 			</div>
 			<div class="card-title">
 				<a href="#" class="toggle-info btn">
@@ -362,8 +415,33 @@ div.card.show div.flap2 {
 					<span class="right"></span>
 				</a>
 				<h2>
-					Spotlight
-					<small>For equality in your playlists</small>
+					Tipsee
+					<small>Give your fans a way to support your work</small>
+				</h2>
+			</div>
+			<div class="card-flap flap1">
+				<div class="card-description">
+					Tipsee is the first and only shortcut which allows developers to create donation buttons which can help them get some cash for their work.
+				</div>
+				<div class="card-flap flap2">
+					<div class="card-actions">
+						<a href="#" class="btn">Download</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="card">
+			<div class="card__image-holder">
+				<img src="https://i.imgur.com/yOhVgap.png" alt="ReleaseKit">
+			</div>
+			<div class="card-title">
+				<a href="#" class="toggle-info btn">
+					<span class="left"></span>
+					<span class="right"></span>
+				</a>
+				<h2>
+					ReleaseKit
+					<small>Generate stylish release notes for shortcuts</small>
 				</h2>
 			</div>
 			<div class="card-flap flap1">
@@ -372,19 +450,245 @@ div.card.show div.flap2 {
 				</div>
 				<div class="card-flap flap2">
 					<div class="card-actions">
-						<a href="#" class="btn">Read more</a>
+						<a href="#" class="btn">Download</a>
 					</div>
 				</div>
 			</div>
 		</div>
-		<!-- partial -->
-		<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-		<script src='https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js'></script>
-		<script src="./script.js"></script>
-
+		<div class="card">
+			<div class="card__image-holder">
+				<img src="https://i.imgur.com/XPl11oM.png" alt="sc diff" style="background-position: top">
+			</div>
+			<div class="card-title">
+				<a href="#" class="toggle-info btn">
+					<span class="left"></span>
+					<span class="right"></span>
+				</a>
+				<h2>
+					sc diff
+					<small>View differences between shortcut versions</small>
+				</h2>
+			</div>
+			<div class="card-flap flap1">
+				<div class="card-description">
+					This grid is an attempt to make something nice that works on touch devices. Ignoring hover states when they're not available etc.
+				</div>
+				<div class="card-flap flap2">
+					<div class="card-actions">
+						<a href="#" class="btn">Download</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="card">
+			<div class="card__image-holder">
+				<img src="https://i.imgur.com/rbT4jDr.png" alt="PassMaster">
+			</div>
+			<div class="card-title">
+				<a href="#" class="toggle-info btn">
+					<span class="left"></span>
+					<span class="right"></span>
+				</a>
+				<h2>
+					PassMaster
+					<small>Generate strong passwords via API</small>
+				</h2>
+			</div>
+			<div class="card-flap flap1">
+				<div class="card-description">
+					This grid is an attempt to make something nice that works on touch devices. Ignoring hover states when they're not available etc.
+				</div>
+				<div class="card-flap flap2">
+					<div class="card-actions">
+						<a href="#" class="btn">Download</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="card">
+			<div class="card__image-holder">
+				<img src="https://i.imgur.com/WuUYFPm.png" alt="Nearbytes">
+			</div>
+			<div class="card-title">
+				<a href="#" class="toggle-info btn">
+					<span class="left"></span>
+					<span class="right"></span>
+				</a>
+				<h2>
+					Nearbytes
+					<small>Find <s>food</s> <span style="color:red">anything</span> anywhere</small>
+				</h2>
+			</div>
+			<div class="card-flap flap1">
+				<div class="card-description">
+					This grid is an attempt to make something nice that works on touch devices. Ignoring hover states when they're not available etc.
+				</div>
+				<div class="card-flap flap2">
+					<div class="card-actions">
+						<a href="#" class="btn">Download</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="card">
+			<div class="card__image-holder">
+				<img src="https://i.imgur.com/DRQKtPt.jpeg" alt="miCloud">
+			</div>
+			<div class="card-title">
+				<a href="#" class="toggle-info btn">
+					<span class="left"></span>
+					<span class="right"></span>
+				</a>
+				<h2>
+					miCloud
+					<small>Version control for shortcuts</small>
+				</h2>
+			</div>
+			<div class="card-flap flap1">
+				<div class="card-description">
+					This grid is an attempt to make something nice that works on touch devices. Ignoring hover states when they're not available etc.
+				</div>
+				<div class="card-flap flap2">
+					<div class="card-actions">
+						<a href="#" class="btn">Download</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="card">
+			<div class="card__image-holder">
+				<img src="https://i.imgur.com/NazeXVN.png" alt="CloudCuts">
+			</div>
+			<div class="card-title">
+				<a href="#" class="toggle-info btn">
+					<span class="left"></span>
+					<span class="right"></span>
+				</a>
+				<h2>
+					CloudCuts
+					<small>A different way to share shortcuts</small>
+				</h2>
+			</div>
+			<div class="card-flap flap1">
+				<div class="card-description">
+					This grid is an attempt to make something nice that works on touch devices. Ignoring hover states when they're not available etc.
+				</div>
+				<div class="card-flap flap2">
+					<div class="card-actions">
+						<a href="#" class="btn">Download</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="card">
+			<div class="card__image-holder">
+				<img src="https://i.imgur.com/3cHUooy.png" alt="Morpheus">
+			</div>
+			<div class="card-title">
+				<a href="#" class="toggle-info btn">
+					<span class="left"></span>
+					<span class="right"></span>
+				</a>
+				<h2>
+					Morpheus
+					<small>Always have a fresh playlist to listen to!</small>
+				</h2>
+			</div>
+			<div class="card-flap flap1">
+				<div class="card-description">
+					This grid is an attempt to make something nice that works on touch devices. Ignoring hover states when they're not available etc.
+				</div>
+				<div class="card-flap flap2">
+					<div class="card-actions">
+						<a href="#" class="btn">Download</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="card">
+			<div class="card__image-holder">
+				<img src="https://i.imgur.com/RG2c4we.png" alt="Timestamped">
+			</div>
+			<div class="card-title">
+				<a href="#" class="toggle-info btn">
+					<span class="left"></span>
+					<span class="right"></span>
+				</a>
+				<h2>
+					Timestamped
+					<small>Send timestamped YouTube videos</small>
+				</h2>
+			</div>
+			<div class="card-flap flap1">
+				<div class="card-description">
+					This grid is an attempt to make something nice that works on touch devices. Ignoring hover states when they're not available etc.
+				</div>
+				<div class="card-flap flap2">
+					<div class="card-actions">
+						<a href="#" class="btn">Download</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="card">
+			<div class="card__image-holder">
+				<img src="https://i.imgur.com/dx7xvXQ.png" alt="Cancelly">
+			</div>
+			<div class="card-title">
+				<a href="#" class="toggle-info btn">
+					<span class="left"></span>
+					<span class="right"></span>
+				</a>
+				<h2>
+					Cancelly
+					<small>Never forget to cancel a free trial again!</small>
+				</h2>
+			</div>
+			<div class="card-flap flap1">
+				<div class="card-description">
+					This grid is an attempt to make something nice that works on touch devices. Ignoring hover states when they're not available etc.
+				</div>
+				<div class="card-flap flap2">
+					<div class="card-actions">
+						<a href="#" class="btn">Download</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="card">
+			<div class="card__image-holder">
+				<img src="https://i.imgur.com/mttDKu7.png" alt="blox">
+			</div>
+			<div class="card-title">
+				<a href="#" class="toggle-info btn">
+					<span class="left"></span>
+					<span class="right"></span>
+				</a>
+				<h2>
+					blox
+					<small>Store Reusable Code</small>
+				</h2>
+			</div>
+			<div class="card-flap flap1">
+				<div class="card-description">
+					blox is a simple, quick, and convenient way to store blocks of reusable code.
+				</div>
+				<div class="card-flap flap2">
+					<div class="card-actions">
+						<a href="#" class="btn">Download</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 </body>
-
 </html>
+
+<!-- partial -->
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js'></script>
+<script src="./script.js"></script>
+
 <script>
   $(document).ready(function () {
 	var zindex = 10;
