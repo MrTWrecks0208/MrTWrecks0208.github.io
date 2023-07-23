@@ -51,7 +51,7 @@ body {
 a.btn {
 	background: #fb8122;
 	border-radius: 5px;
-	box-shadow: 2px 4px 10px 4px rgba(0, 0, 0, 0.2);
+	box-shadow: 2px 2px 10px 4px rgba(0, 0, 0, 0.2);
 	color: #fff;
 	display: inline-block;
 	padding: 6px 30px 8px;
@@ -61,7 +61,7 @@ a.btn {
 }
 .no-touch a.btn:hover {
 	background: #e06404;
-	box-shadow: 2px 8px 6px 6px rgba(0, 0, 0, 0.1);
+	box-shadow: 2px 2px 6px 6px rgba(0, 0, 0, 0.1);
 	transform: translateY(-2px);
 	transition: all 0.2s 0s ease-in-out;
 }
