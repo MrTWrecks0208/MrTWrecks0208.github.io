@@ -3,11 +3,11 @@
 <details open>
   
 <summary>🔍 Overview</summary> 
-**Scrubadub** is a real-time multi-string match and replace ("scrub") tool which allows you to create any number of rules using regular expressions, strings, and/or patterns to find and replace as many strings or patterns as needed within a large body of text.
+**Scrubadub** is a real-time text scrubbing tool which allows you to create any number of rules using regular expressions, strings, and/or patterns to find and replace as many strings or patterns as needed within a large body of text.
 
-### Key Principles
+#### Key Principles
 - **Sequential Execution**: Rules run from top to bottom. Each rule operates on the transformed output of the rule that preceded it.
-- **Real-Time Visual Validation**: Text matching your active regular expressions is highlighted live in the source viewer with high-contrast indicator bands before changes are finalized.
+- **Real-Time Visual Validation**: Text matching your active rules is highlighted live in the source viewer with high-contrast indicator bands before changes are finalized.
 - **AI-Assisted Rule Synthesis**: Describe what you want to extract or redact in natural language, and the integrated Gemini AI will generate, validate, and explain the regex pattern for you.
 - **Client-Side Privacy First**: All pattern matching, replacements, and data processing happen entirely within your local browser runtime. Your text is never transmitted to an external server for processing, monetization, or advertising.
 
@@ -17,7 +17,7 @@
   
 <summary>📐 Layout</summary>
 
-The Scrubadub workspace is organized into two primary columns below the top header and preset bar:
+The Scrubadub workspace is organized into two primary columns below the top header and rule sets bar:
 
 ```
 ┌──────────────────────────────────────────────────────────────────────────────────┐
@@ -39,17 +39,17 @@ The Scrubadub workspace is organized into two primary columns below the top head
 ```
 
 **Header (Logo, Account, and Rule Sets)**
-   - Quick-switch selector for built-in rule sets (*PII Redactor*, *HTML Stripper*, *Log Cleaner*, *Code Minifier*).
-   - Custom rule sets bar to load or delete your saved custom rule sets.
+   - Quick-switch selector for built-in rule sets (*PII Redactor*, *HTML Stripper*, *Log Cleaner*, *Code Minifier*, and more).
+   - Custom rule sets section for your saved custom rule sets.
    - User account & authentication menu.
 
 **Left Column (Editor Panels)**
-   - **Source Input (Top Left)**: Enter or paste your raw text. Live color-coded overlays highlight all matched regions directly under your text cursor. Includes a sample data generator and clear button.
-   - **Scrubbed Output (Bottom Left)**: Displays the live sanitized result right below the source input, complete with one-click clipboard copy, plain-text download, and real-time match/alteration statistics.
+   - **Source Input (Top Left)**: Enter or paste your text into the textbox. Live color-coded overlays highlight all matched regions. Includes a sample data generator and clear button.
+   - **Scrubbed Output (Bottom Left)**: Displays the live scrubbed result, complete with one-click clipboard copy, plain-text download, and real-time scrubbing statistics.
 
 **Right Column (Rules Management)**
-   - **AI Rule Generator (Top Right)**: Describe matching patterns in plain English to automatically synthesize rules.
-   - **Rules List (Bottom Right)**: Add rules, reorder them, adjust regex patterns and replacements, toggle flags (`g`, `i`, `m`, `s`), enable/disable rules, and save your rules into custom rule sets.
+   - **AI Rule Generator (Top Right)**: Describe matching patterns in plain English to have the AI create rules for you.
+   - **Rules List (Bottom Right)**: Add rules, reorder them, adjust regex patterns and replacements, toggle flags (`g`, `i`, `m`, `s`), enable/disable rules, and save your rules as custom rule sets.
      
 </details>
 
