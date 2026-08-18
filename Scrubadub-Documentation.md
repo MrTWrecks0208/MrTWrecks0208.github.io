@@ -56,7 +56,7 @@ The Scrubadub workspace is organized into two primary columns below the top head
 
 <details>
   
-<summary>📋 Getting Started</summary>
+<summary>🚀 Getting Started</summary>
 
 ## Source Input
   The **Source Input** pane is on the left-hand side of the screen. Paste your text into the Source Input.
