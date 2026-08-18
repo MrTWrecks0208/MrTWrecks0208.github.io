@@ -59,12 +59,12 @@ The Scrubadub workspace is organized into two primary columns below the top head
 <summary>🚀 Getting Started</summary>
 
 ## Source Input
-  The **Source Input** pane is on the left-hand side of the screen. Paste your text into the Source Input.
-  The engine operates on an ordered list of rules. When text is entered into the Source Input, it passes through Rule 1. The resulting text is then fed directly into Rule 2 and so on through the end of your active rules.
+  The **Source Input** pane is on the left-hand side of the screen. Paste your text into the textbox.
+  The engine operates on an ordered list of rules. When text is entered into the Source Input, it passes through Rule 1, then the resulting text is then fed directly into Rule 2, and so on through the end of your active rules.
 
 ### Matched Regions
-- As you enter, paste, or edit text in the Source Input, Scrubadub highlights every matched text segment in real time.
-- Matches from active rules are rendered with distinct visual highlight boxes synchronized behind the text cursor, allowing you to verify exactly what will be modified before you export your data.
+- As you enter, paste, or edit text in the Source Input, Scrubadub highlights every matched region in real time.
+- Matches from active rules are rendered with distinct visual highlight boxes, allowing you to verify exactly what will be modified before you export your data.
 
 ### Generate Sample Data
 - To test rules immediately without exposing real customer data or searching for test files, click the **`Generate Sample Data`** button above the source editor.
