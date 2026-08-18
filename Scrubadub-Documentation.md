@@ -2,7 +2,7 @@
 
 <details open>
   
-<summary>🔍 Overview</summary>
+<summary>🔍 Overview</summary><br/>
 
 **Scrubadub** is a real-time text scrubbing tool which allows you to create any number of rules using regular expressions, strings, and/or patterns to find and replace as many strings or patterns as needed within a large body of text.
 
