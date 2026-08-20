@@ -68,9 +68,33 @@ The Scrubadub workspace is organized into two primary columns below the top head
 
 ### Generate Sample Data
 - To test rules immediately without exposing real customer data or searching for test files, click the **`Generate Sample Data`** button above the source editor.
-- Scrubadub automatically injects structured test data tailored to your active rules (including realistic mock emails, phone numbers, IP addresses, JSON objects, or server logs).
+- Scrubadub automatically injects structured test data tailored to your active rules (including realistic mock emails, phone numbers, IP addresses, JSON objects, or server logs)
 
-## Rules & Rule Sets
+### Scrubbed Output
+
+The **Scrubbed Output** pane is on the bottom left-hand side of the screen below the Source Input pane. The Scrubbed Output pane displays the real-time result produced by executing your active rules against the source text.
+
+#### Copy
+- Click the **`Copy`** button in the output panel header to copy the entire scrubbed text directly to your clipboard.
+- A visual checkmark confirmation verifies that the text was copied successfully.
+
+#### Download
+- Click the **`Download`** button to export the scrubbed output as a clean `.txt` plain-text file to your local computer.
+
+#### Stats
+The telemetry toolbar at the top of the output panel displays real-time execution analytics:
+- **Matches Found**: The total count of all matched text instances across all active rules.
+- **Characters Altered / Removed**: The net difference in character count between the raw input and the final scrubbed output.
+- **Line & Word Counts**: Total line and word counts for the sanitized document.
+- **Execution Time**: The time in milliseconds (ms) taken to execute your rules, ensuring high-throughput performance.
+
+</details>
+
+<details>
+
+  <summary>🧰 Rules & Rule Sets</summary>
+
+## Rules
 
 ### Creating Rules
 - Click the **`+ Add Rule`** button in the Rules panel to append a new blank rule.
@@ -123,13 +147,9 @@ Each rule includes toggleable flag pills that alter regular expression engine be
 - You can turn individual rules off temporarily to test how the rest of your rules behave, without having to delete the rule or lose its configuration.
 
 ### Saving Rules
-Scrubadub requires an account in order to save custom rule sets. Please refer to the section below, "Rule Sets", for more information. 
+Scrubadub requires an account in order to save custom rule sets. Please refer to the section below, "Rule Sets", for more information.
 
-</details>
-
-<details>
-
-<summary>🧰 Rule Sets</summary>
+## Rule Sets
   
 ### Understanding Rule Sets
 <strong>_Note: You <span style="text-decoration-line: underline;text-decoration-style: solid;text-decoration-thickness: 1.5px">MUST</span> create an account in order to create and save custom rule sets and sync them across all of your devices._</strong>
@@ -139,28 +159,6 @@ Scrubadub requires an account in order to save custom rule sets. Please refer to
 - Provide a name (e.g., *"Kubernetes Log Sanitizer"*) and an optional description.
 - Your saved rule sets will appear in the **Custom Rule Sets** bar at the top for one-click loading on any device where you are signed in.
 - You can manage, update, or delete existing custom rule sets from the custom rule sets bar.
-  
-</details>
-
-<details>
-  
-<summary>🧼 Scrubbed Output</summary>
-
-The **Scrubbed Output** pane is on the bottom left-hand side of the screen below the Source Input pane. The Scrubbed Output pane displays the real-time result produced by executing your active rules against the source text.
-
-### Copy
-- Click the **`Copy`** button in the output panel header to copy the entire scrubbed text directly to your clipboard.
-- A visual checkmark confirmation verifies that the text was copied successfully.
-
-### Download
-- Click the **`Download`** button to export the scrubbed output as a clean `.txt` plain-text file to your local computer.
-
-### Stats
-The telemetry toolbar at the top of the output panel displays real-time execution analytics:
-- **Matches Found**: The total count of all matched text instances across all active rules.
-- **Characters Altered / Removed**: The net difference in character count between the raw input and the final scrubbed output.
-- **Line & Word Counts**: Total line and word counts for the sanitized document.
-- **Execution Time**: The time in milliseconds (ms) taken to execute your rules, ensuring high-throughput performance.
 
 </details>
 
