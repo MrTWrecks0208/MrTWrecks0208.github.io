@@ -144,6 +144,7 @@ Each rule includes flags that alter regular expression engine behavior:
 - **`i` (Case Insensitive)**: Ignores character casing so that `[a-z]` matches uppercase letters as well.
 - **`m` (Multiline Mode)**: Treats the beginning (`^`) and end (`$`) assertions as matching the start and end of each individual line, rather than the start and end of the entire input string.
 - **`s` (DotAll / Single Line)**: Allows the dot `.` wildcard to match newline characters (`\n`), enabling matches that span across multiple lines.
+  
 Simply click the box next to any of the flags to enable the respective flag.
 
 #### Enable/Disable
