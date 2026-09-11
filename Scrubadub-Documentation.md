@@ -120,7 +120,7 @@ The telemetry toolbar at the top of the output panel displays real-time executio
 - **Live Syntax Validation**: If your regex contains an invalid token or an unclosed group, an error indicator will immediately alert you without interrupting your session.
 
 ##### AI Rule Generator
-- If you don't know the exact regex syntax or are dealing with complex edge cases:
+- If you don't know regular expressions, or if you aren't sure of the exact syntax or are dealing with complex edge cases:
   1. Click the **`AI Assistant`** / **`Generate with AI`** button in the header or rule section.
   2. Enter a natural language description of what you want to match, such as:
      - *"Match Canadian postal codes like A1A 1A1"*
