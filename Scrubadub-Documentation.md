@@ -73,7 +73,7 @@ The Scrubadub workspace is organized into two primary columns below the top head
 - To test rules immediately without exposing real customer data or searching for test files, click the **`Generate Sample Data`** button above the source editor.
 - Scrubadub automatically injects structured test data tailored to your active rules (including realistic mock emails, phone numbers, IP addresses, JSON objects, or server logs)
 
-#### Scrubbed Output
+### Scrubbed Output
 
 The **Scrubbed Output** pane is on the bottom left-hand side of the screen below the Source Input pane. The Scrubbed Output pane displays the real-time result produced by executing your active rules against the source text.
 
