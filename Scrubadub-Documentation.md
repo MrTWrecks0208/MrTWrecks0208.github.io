@@ -23,6 +23,7 @@ The Scrubadub workspace is organized into two primary columns below the top head
 ```
 ┌──────────────────────────────────────────────────────────────────────────────────┐
 │  HEADER: Logo                                                  Auth / Account    │
+├──────────────────────────────────────────────────────────────────────────────────┤
 |  Rule Sets                                                                       |
 ├─────────────────────────────────────────┬────────────────────────────────────────┤
 │  LEFT COLUMN (Editor Panels)            │  RIGHT COLUMN (Rules Management)       │
@@ -39,10 +40,12 @@ The Scrubadub workspace is organized into two primary columns below the top head
 └─────────────────────────────────────────┴────────────────────────────────────────┘
 ```
 
-**Header (Logo, Account, and Rule Sets)**
+**Header (Logo, Account)**
+   - User account & authentication menu.
+
+**Rule Sets (Built-in, Custom)**
    - Quick-switch selector for built-in rule sets (*PII Redactor*, *HTML Stripper*, *Log Cleaner*, *Code Minifier*, and more).
    - Custom rule sets section for your saved custom rule sets.
-   - User account & authentication menu.
 
 **Left Column (Editor Panels)**
    - **Source Input (Top Left)**: Enter or paste your text into the textbox. Live color-coded overlays highlight all matched regions. Includes a sample data generator and clear button.
