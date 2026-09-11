@@ -121,13 +121,13 @@ The telemetry toolbar at the top of the output panel displays real-time executio
 
 ##### AI Rule Generator
 - If you don't know regular expressions, or if you aren't sure of the exact syntax or are dealing with complex edge cases:
-  1. Click the **`AI Assistant`** / **`Generate with AI`** button in the header or rule section.
-  2. Enter a natural language description of what you want to match, such as:
-     - *"Match Canadian postal codes like A1A 1A1"*
-     - *"Find all UUID v4 strings"*
-     - *"Match ISO 8601 formatted timestamps (YYYY-MM-DDTHH:MM:SSZ)"*
-     - *"Extract dollar amounts like $1,250.00"*
-  3. The Gemini AI synthesizes the regular expression, provides a step-by-step breakdown of how the tokens work, and inserts the completed rule into your rules list with recommended flags.
+1. In the AI Rule Generator textbox, enter a natural language description of what you want to match, such as:
+    - *"Match Canadian postal codes like A1A 1A1"*
+    - *"Find all UUID v4 strings"*
+    - *"Match ISO 8601 formatted timestamps (YYYY-MM-DDTHH:MM:SSZ)"*
+    -   *"Extract dollar amounts like $1,250.00"*
+2. Click **Generate Rule**
+3. The Gemini AI synthesizes the regular expression, provides a step-by-step breakdown of how the tokens work, and inserts the completed rule into your rules list with recommended flags.
 
 #### Replace With
 - In the **Replace With** field, enter the replacement string that will substitute for each matched occurrence.
