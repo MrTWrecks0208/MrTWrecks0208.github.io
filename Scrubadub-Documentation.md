@@ -102,7 +102,7 @@ The telemetry toolbar at the top of the output panel displays real-time executio
 #### Creating Rules
 - Click the **`+ Add Rule`** button in the Rules panel to append a new blank rule.
 - You can create as many rules as needed to handle distinct patterns independently.
-- Alternatively, clicking any **Built-in Rule Set** in the top bar will populate your workspace with a curated set of rules tailored to that specific domain.
+- Alternatively, clicking any Built-in Rule Set from the **Rule Sets** section will populate your workspace with a curated set of rules tailored to that specific domain.
 
 #### Renaming Rules
 - Click directly on the rule name field (e.g., `Rule 1`, `Rule 2`) to assign a meaningful label, such as *"Redact SSNs"*, *"Strip <script> tags"*, or *"Mask IPv4 Addresses"*.
