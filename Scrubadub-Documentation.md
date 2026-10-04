@@ -8,7 +8,7 @@
 **Scrubadub** is a real-time text scrubbing tool which allows you to create any number of rules using regular expressions, strings, and/or patterns to find and replace as many strings or patterns as needed within a large body of text. Think of it as a \[theoretically\] limitless Find & Replace tool.
 
 #### Key Principles
-- **Sequential Execution**: Rules run from top to bottom. Each rule operates on the transformed output of the rule that precedes it.
+- **Sequential Execution**: Rules run in order from top to bottom. Each rule operates on the transformed output of the rule that precedes it.
 - **Real-Time Visual Validation**: Text matching your active rules is highlighted in real-time in the source viewer with high-contrast badges.
 - **AI Rule Generator**: Describe what you want to extract or redact in natural language, and the integrated Gemini AI will generate, validate, and explain the regex pattern for you.
 - **Client-Side Operations**: All data processing happens entirely in your browser at runtime. Your text is never transmitted to an external server for processing, monetization, or advertising.
