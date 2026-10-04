@@ -18,7 +18,7 @@
 <details>
   
 <summary>📐 Layout</summary>
-
+<br/>
 The Scrubadub workspace is organized into two primary columns below the top header and rule sets bar:
 
 ```
